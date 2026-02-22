@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Technology Solutions | CCTV | Computers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <style>
+      /* ===== SERVICES SECTION ===== */
+.cctvlaptop-services {
+    padding: 60px 20px;
+    position: relative;
+    background: var(--white);
+}
+
+.cctvlaptop-services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, var(--orange));
+    animation: cctvlaptop-lineGrow 1s ease-out forwards;
+}
+
+@keyframes cctvlaptop-lineGrow {
+    from { height: 0; opacity: 0; }
+    to { height: 40px; opacity: 1; }
+}
+
+/* Header */
+.cctvlaptop-section-header {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    text-align: center;
+    position: relative;
+}
+
+.cctvlaptop-section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: cctvlaptop-fadeIn 0.6s ease forwards 0.2s;
+}
+
+.cctvlaptop-section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--black);
+    opacity: 0;
+    animation: cctvlaptop-fadeSlideUp 0.6s ease forwards 0.3s;
+}
+
+.cctvlaptop-section-title span {
+    color: var(--orange);
+}
+
+.cctvlaptop-section-subtitle {
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin-top: 10px;
+    opacity: 0;
+    animation: cctvlaptop-fadeIn 0.6s ease forwards 0.4s;
+}
+
+/* Services Grid */
+.cctvlaptop-services-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Service Card */
+.cctvlaptop-service-card {
+    background: var(--white);
+    position: relative;
+    padding: 28px 24px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cctvlaptop-cardReveal 0.5s ease forwards;
+    display: block;
+}
+
+.cctvlaptop-service-card:nth-child(1) { animation-delay: 0.1s; }
+.cctvlaptop-service-card:nth-child(2) { animation-delay: 0.15s; }
+.cctvlaptop-service-card:nth-child(3) { animation-delay: 0.2s; }
+.cctvlaptop-service-card:nth-child(4) { animation-delay: 0.25s; }
+.cctvlaptop-service-card:nth-child(5) { animation-delay: 0.3s; }
+.cctvlaptop-service-card:nth-child(6) { animation-delay: 0.35s; }
+
+@keyframes cctvlaptop-cardReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cctvlaptop-service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #535353;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cctvlaptop-service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.03) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.cctvlaptop-service-card:hover {
+    transform: translateY(-5px);
+    border-color:#838383;
+    box-shadow: 0 15px 40px rgba(255, 107, 0, 0.1);
+}
+
+.cctvlaptop-service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.cctvlaptop-service-card:hover::after {
+    opacity: 1;
+}
+
+.cctvlaptop-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.cctvlaptop-card-icon {
+    width: 42px;
+    height: 42px;
+    position: relative;
+    z-index: 1;
+}
+
+.cctvlaptop-card-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--orange);
+    stroke-width: 1.5;
+    fill: none;
+    transition: all 0.35s ease;
+}
+
+.cctvlaptop-service-card:hover .cctvlaptop-card-icon svg {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.cctvlaptop-card-number {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-light);
+    transition: color 0.35s ease;
+}
+
+.cctvlaptop-service-card:hover .cctvlaptop-card-number {
+    color: var(--orange);
+}
+
+.cctvlaptop-card-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+    color: var(--black);
+    position: relative;
+    z-index: 1;
+    transition: color 0.35s ease;
+}
+
+.cctvlaptop-card-description {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--gray);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+}
+
+.cctvlaptop-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.cctvlaptop-card-link::after {
+    content: '→';
+    transition: transform 0.3s ease;
+}
+
+.cctvlaptop-service-card:hover .cctvlaptop-card-link {
+    color: var(--orange);
+}
+
+.cctvlaptop-service-card:hover .cctvlaptop-card-link::after {
+    transform: translateX(5px);
+}
+
+/* Featured Card */
+.cctvlaptop-service-card.cctvlaptop-featured {
+    background: var(--black);
+    border-color: var(--black);
+}
+
+.cctvlaptop-service-card.cctvlaptop-featured .cctvlaptop-card-number {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.cctvlaptop-service-card.cctvlaptop-featured:hover .cctvlaptop-card-number {
+    color: var(--orange);
+}
+
+.cctvlaptop-service-card.cctvlaptop-featured .cctvlaptop-card-title {
+    color: var(--white);
+}
+
+.cctvlaptop-service-card.cctvlaptop-featured .cctvlaptop-card-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cctvlaptop-service-card.cctvlaptop-featured .cctvlaptop-card-link {
+    color: var(--orange);
+}
+
+.cctvlaptop-service-card.cctvlaptop-featured:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cctvlaptop-service-card.cctvlaptop-featured::before {
+    background: var(--orange);
+}
+
+/* Bottom CTA */
+.cctvlaptop-services-cta {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    opacity: 0;
+    animation: cctvlaptop-fadeIn 0.6s ease forwards 0.5s;
+}
+
+.cctvlaptop-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 26px;
+    background: var(--orange);
+    border: none;
+    border-radius: 6px;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+.cctvlaptop-cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    z-index: 0;
+    border-radius: 6px;
+}
+
+.cctvlaptop-cta-button:hover::before {
+    transform: translateX(0);
+}
+
+.cctvlaptop-cta-button span,
+.cctvlaptop-cta-button svg {
+    position: relative;
+    z-index: 1;
+}
+
+.cctvlaptop-cta-button svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+}
+
+.cctvlaptop-cta-button:hover svg {
+    transform: translateX(3px);
+}
+
+.cctvlaptop-cta-text {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.cctvlaptop-cta-text a {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.cctvlaptop-cta-text a:hover {
+    color: var(--black);
+}
+
+/* Animations */
+@keyframes cctvlaptop-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes cctvlaptop-fadeSlideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(15px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+/* Floating dots decoration */
+.cctvlaptop-decoration {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--orange);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.cctvlaptop-decoration:nth-child(1) { top: 20%; left: 5%; animation: cctvlaptop-float 3s ease-in-out infinite; }
+.cctvlaptop-decoration:nth-child(2) { top: 60%; left: 8%; animation: cctvlaptop-float 4s ease-in-out infinite 0.5s; }
+.cctvlaptop-decoration:nth-child(3) { top: 30%; right: 5%; animation: cctvlaptop-float 3.5s ease-in-out infinite 1s; }
+.cctvlaptop-decoration:nth-child(4) { top: 70%; right: 10%; animation: cctvlaptop-float 4s ease-in-out infinite 1.5s; }
+
+@keyframes cctvlaptop-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cctvlaptop-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .cctvlaptop-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cctvlaptop-services {
+        padding: 40px 16px;
+    }
+}
+
+
+     /* ==================== */
+        /* CLIENTS SECTION      */
+        /* ==================== */
+        .clients-section {
+            width: 100%;
+            padding: 80px 0;
+            background: var(--white);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 16px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--orange);
+            border-radius: 1px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1.2;
+        }
+
+        .section-title span {
+            color: var(--orange);
+        }
+
+        /* Scroll Container */
+        .logo-scroll-wrapper {
+            position: relative;
+        }
+
+        .logo-scroll-wrapper::before,
+        .logo-scroll-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .logo-scroll-wrapper::before {
+            left: 0;
+            background: linear-gradient(90deg, var(--white) 0%, transparent 100%);
+        }
+
+        .logo-scroll-wrapper::after {
+            right: 0;
+            background: linear-gradient(-90deg, var(--white) 0%, transparent 100%);
+        }
+
+        .logo-scroll-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+        }
+
+        .logo-scroll-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-item {
+            flex-shrink: 0;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 40px;
+            margin: 0 20px;
+            background: var(--white-off);
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(255, 107, 0, 0.2);
+        }
+
+        .logo-item:hover::before {
+            opacity: 0.08;
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 50px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%) opacity(0.6);
+            transition: filter 0.4s ease, transform 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%) opacity(1);
+            transform: scale(1.05);
+        }
+
+        /* ==================== */
+        /* DEALERS SECTION      */
+        /* ==================== */
+        .dealers-section {
+            width: 100%;
+            padding: 80px 0;
+            background:whitesmoke;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .dealers-section .section-label {
+            color: var(--orange);
+        }
+
+        .dealers-section .section-label::before,
+        .dealers-section .section-label::after {
+            background: var(--orange);
+        }
+
+        .dealers-section .section-title {
+            color: #000;
+        }
+
+        .dealers-section .section-title span {
+            color: var(--orange);
+        }
+
+        .dealers-section .logo-scroll-wrapper::before {
+            background: linear-gradient(90deg, var(--black) 0%, transparent 100%);
+        }
+
+        .dealers-section .logo-scroll-wrapper::after {
+            background: linear-gradient(-90deg, var(--black) 0%, transparent 100%);
+        }
+
+        .dealers-section .logo-scroll-track {
+            animation: scroll-reverse 35s linear infinite;
+        }
+
+        @keyframes scroll-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .dealers-section .logo-item {
+            background: var(--black-soft);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dealers-section .logo-item::before {
+            background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 100%);
+        }
+
+        .dealers-section .logo-item:hover {
+            box-shadow: 0 20px 40px -10px rgba(255, 107, 0, 0.3);
+            border-color: rgba(255, 107, 0, 0.2);
+        }
+
+        .dealers-section .logo-item img {
+            filter: grayscale(100%) brightness(1.5) opacity(0.6);
+        }
+
+        .dealers-section .logo-item:hover img {
+            filter: grayscale(0%) brightness(1) opacity(1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .clients-section,
+            .dealers-section {
+                padding: 60px 0;
+            }
+
+            .logo-scroll-wrapper::before,
+            .logo-scroll-wrapper::after {
+                width: 60px;
+            }
+
+            .logo-item {
+                width: 160px;
+                height: 80px;
+                margin: 0 12px;
+                padding: 16px 24px;
+            }
+        }
+
+
+          /* ==================== */
+        /* WHY CHOOSE US        */
+        /* ==================== */
+        .why-choose-section {
+            width: 100%;
+            padding: 100px 20px;
+            background: var(--white-off);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle Background Pattern */
+        .why-choose-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 107, 0, 0.04) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .why-choose-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 107, 0, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 16px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--orange);
+            border-radius: 1px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1.2;
+        }
+
+        .section-title span {
+            color: var(--orange);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        /* Feature Card */
+        .feature-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 45px 35px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(255, 107, 0, 0.15);
+        }
+
+        /* Top Gradient Bar */
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Corner Decoration */
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            right: -60px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.08), transparent);
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        .feature-card:hover::after {
+            transform: scale(1.3);
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.12), transparent);
+        }
+
+        /* Icon Container */
+        .feature-icon-box {
+            width: 75px;
+            height: 75px;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 28px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px -10px rgba(255, 107, 0, 0.4);
+        }
+
+        .feature-card:hover .feature-icon-box {
+            transform: rotate(-5deg) scale(1.05);
+            box-shadow: 0 15px 35px -10px rgba(255, 107, 0, 0.5);
+        }
+
+        .feature-icon-box svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--white);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Content */
+        .feature-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-description {
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--gray);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Bottom Link */
+        .feature-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--orange);
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .feature-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            transition: width 0.3s ease;
+        }
+
+        .feature-link:hover::after {
+            width: calc(100% - 26px);
+        }
+
+        .feature-link svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--orange);
+            stroke-width: 2;
+            fill: none;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-link:hover svg {
+            transform: translateX(4px);
+        }
+
+
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-card:nth-child(3) {
+                grid-column: span 2;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+
+        }
+
+        @media (max-width: 768px) {
+            .why-choose-section {
+                padding: 70px 16px;
+            }
+
+            .section-header {
+                margin-bottom: 50px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .feature-card {
+                padding: 35px 28px;
+            }
+
+            .feature-card:nth-child(3) {
+                grid-column: span 1;
+                max-width: 100%;
+            }
+
+
+        }
+
+        /* ###########Our Sales  Approach########### */
+
+          /* Header */
+          .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 12px;
+        }
+
+        .section-title span {
+            color: var(--orange);
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--gray);
+        }
+
+        /* Grid - 3 columns on desktop */
+        .approach-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        /* Card */
+        .approach-item {
+            text-align: center;
+            padding: 40px 28px;
+            border-radius: 16px;
+            background: var(--white-off);
+            transition: all 0.3s ease;
+        }
+
+        .approach-item:hover {
+            background: var(--white);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .item-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .approach-item:hover .item-icon {
+            transform: scale(1.1);
+        }
+
+        .item-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--white);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .item-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+
+        .item-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .item-features li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .item-features li:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: var(--orange);
+            border-radius: 50%;
+        }
+
+        /* Tablet - 2 columns */
+        @media (max-width: 1024px) {
+            .approach-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .approach-item:last-child {
+                grid-column: span 2;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Mobile - 1 column */
+        @media (max-width: 600px) {
+            body {
+                padding: 50px 16px;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .approach-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .approach-item {
+                padding: 30px 24px;
+            }
+
+            .approach-item:last-child {
+                grid-column: span 1;
+                max-width: none;
+            }
+
+            .item-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .item-icon svg {
+                width: 26px;
+                height: 26px;
+            }
+
+            .item-title {
+                font-size: 1.15rem;
+                margin-bottom: 16px;
+            }
+
+            .item-features li {
+                font-size: 0.9rem;
+            }
+        }
+  </style>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><img src="images/logo.png" style="max-width:55px;"></a>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cctvservice.html" class="active">CCTV Camera</a></li>
+        <li><a href="computersalesandservices.html">Computer Sales & Services</a></li> 
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="gts-container">
+    
+    <!-- Page Header -->
+    <header class="gts-page-header">
+      <!-- Accent Bar -->
+      <div class="gts-accent-bar"></div>
+      
+      <!-- Decorative Circles -->
+      <div class="gts-header-circle"></div>
+      <div class="gts-header-circle-inner"></div>
+
+      <!-- Content -->
+      <div class="gts-header-content">
+        <nav class="gts-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="gts-breadcrumb-separator">›</span>
+          <span class="gts-breadcrumb-current">COMPUTER SALES & SERVICES</span>
+        </nav>
+        <div class="gts-title-row">
+          <h1 class="gts-page-title">Get in <span>Touch</span></h1>
+          <p class="gts-tagline">We're here to help</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+     
+
+  </div>
+
+
+
+
+
+ <!-- About Section -->
+ <section id="cctvlaptop-about">
+    <div class="cctvlaptop-about-container">
+        <div class="cctvlaptop-about-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="Server Room" class="cctvlaptop-about-image" />
+            <!-- <div class="cctvlaptop-about-page-badge">2/11</div> -->
+        </div>
+        <div class="cctvlaptop-about-content">
+            <div class="cctvlaptop-about-label">Who We Are</div>
+            <h2 class="cctvlaptop-about-title">About the <span>Company</span></h2>
+            <p class="cctvlaptop-about-text">
+                Group Technology Security Solutions
+is a pioneering company offering a synergistic
+blend of cutting-edge sales and service in the realm of
+Closed-Circuit Television Camera (CCTV) solutions.
+Our commitment to technological excellence and customer
+satisfaction positions us as a trusted partner for
+businesses seeking robust security for their premises.
+            </p>
+        </div>
+    </div>
+    <div class="cctvlaptop-about-decorative"></div>
+</section>
+
+<!-- Mission Section -->
+<section id="cctvlaptop-mission">
+    <div class="cctvlaptop-mission-container">
+        <div class="cctvlaptop-mission-content">
+            <div class="cctvlaptop-mission-label">What We Do</div>
+            <h2 class="cctvlaptop-mission-title">Our Mission</h2>
+            <p class="cctvlaptop-mission-text">
+                Our mission is to provide comprehensive security solutions
+through the integration of advanced CCTV technologies,
+expert sales consultation and dedicated service support. We
+strive to empower businesses with the tools they need to
+safeguard their assets and operations effectively.
+            </p>
+        </div>
+        <div class="cctvlaptop-mission-image-wrapper">
+            <div class="cctvlaptop-mission-image-frame">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Office Computers" class="cctvlaptop-mission-image" />
+            </div>
+            <!-- <div class="cctvlaptop-mission-page-badge">3/11</div> -->
+            <div class="cctvlaptop-mission-shapes">
+                <div class="cctvlaptop-mission-shape"></div>
+                <div class="cctvlaptop-mission-shape"></div>
+                <div class="cctvlaptop-mission-shape"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+ <!-- ===== SERVICES SECTION ===== -->
+ <section class="cctvlaptop-services">
+    <div class="cctvlaptop-decoration"></div>
+    <div class="cctvlaptop-decoration"></div>
+    <div class="cctvlaptop-decoration"></div>
+    <div class="cctvlaptop-decoration"></div>
+
+    <header class="cctvlaptop-section-header">
+        <p class="cctvlaptop-section-label">What We Do</p>
+        <h2 class="cctvlaptop-section-title">Our <span>Services</span></h2>
+        <p class="cctvlaptop-section-subtitle">Crafting digital experiences that drive results</p>
+    </header>
+
+    <div class="cctvlaptop-services-grid">
+        <!-- Card 1 -->
+        <article class="cctvlaptop-service-card">
+            <div class="cctvlaptop-card-header">
+                <div class="cctvlaptop-card-icon">
+                    <svg viewBox="0 0 40 40">
+                        <rect x="4" y="4" width="32" height="32" rx="3"/>
+                        <line x1="4" y1="12" x2="36" y2="12"/>
+                        <circle cx="10" cy="8" r="1.5"/>
+                        <circle cx="15" cy="8" r="1.5"/>
+                        <rect x="10" y="18" width="20" height="12" rx="2"/>
+                    </svg>
+                </div>
+                <span class="cctvlaptop-card-number">01</span>
+            </div>
+            <h3 class="cctvlaptop-card-title">CCTV Design and
+Installation</h3>
+            <p class="cctvlaptop-card-description">
+                Tailored design and expert
+installation of CCTV
+systems to meet specific
+security needs.
+Seamless integration with
+existing security
+infrastructure.
+            </p>
+            <!-- <a href="#" class="cctvlaptop-card-link">Learn More</a> -->
+        </article>
+
+        <!-- Card 2 - Featured -->
+        <article class="cctvlaptop-service-card">
+            <div class="cctvlaptop-card-header">
+                <div class="cctvlaptop-card-icon">
+                    <svg viewBox="0 0 40 40">
+                        <rect x="4" y="4" width="32" height="32" rx="3"/>
+                        <line x1="4" y1="12" x2="36" y2="12"/>
+                        <circle cx="10" cy="8" r="1.5"/>
+                        <circle cx="15" cy="8" r="1.5"/>
+                        <rect x="10" y="18" width="20" height="12" rx="2"/>
+                    </svg>
+                </div>
+                <span class="cctvlaptop-card-number">02</span>
+            </div>
+            <h3 class="cctvlaptop-card-title">Cutting-Edge CCTV
+Equipment Sales</h3>
+            <p class="cctvlaptop-card-description">
+                Offering a wide range of high-
+quality CCTV cameras,
+recording devices, and
+accessories.
+Consultative sales approach
+to ensure clients receive
+solutions aligned with their
+requirements.
+            </p>
+            <!-- <a href="#" class="cctvlaptop-card-link">Learn More</a> -->
+        </article>
+
+        <!-- Card 3 -->
+        <article class="cctvlaptop-service-card">
+            <div class="cctvlaptop-card-header">
+                <div class="cctvlaptop-card-icon">
+                    <svg viewBox="0 0 40 40">
+                        <rect x="2" y="8" width="16" height="24" rx="2"/>
+                        <rect x="22" y="4" width="16" height="32" rx="2"/>
+                        <line x1="6" y1="26" x2="14" y2="26"/>
+                        <line x1="26" y1="30" x2="34" y2="30"/>
+                    </svg>
+                </div>
+                <span class="cctvlaptop-card-number">03</span>
+            </div>
+            <h3 class="cctvlaptop-card-title">Remote
+Monitoring and
+Management</h3>
+            <p class="cctvlaptop-card-description">
+                24/7 remote monitoring
+services to enhance
+security vigilance.
+Proactive threat detection
+and instant response
+capabilities.
+            </p>
+            <!-- <a href="#" class="cctvlaptop-card-link">Learn More</a> -->
+        </article>
+
+        <!-- Card 4 -->
+        <article class="cctvlaptop-service-card">
+            <div class="cctvlaptop-card-header">
+                <div class="cctvlaptop-card-icon">
+                    <svg viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="15"/>
+                        <path d="M20 8 L20 20 L30 26"/>
+                        <circle cx="20" cy="20" r="3"/>
+                    </svg>
+                </div>
+                <span class="cctvlaptop-card-number">04</span>
+            </div>
+            <h3 class="cctvlaptop-card-title">Access Control
+Integration</h3>
+            <p class="cctvlaptop-card-description">
+                Integration of CCTV
+systems with access
+control mechanisms for
+enhanced security.
+Real-time monitoring and
+control of physical access
+points.
+            </p>
+            <!-- <a href="#" class="cctvlaptop-card-link">Learn More</a> -->
+        </article>
+
+        <!-- Card 5 -->
+        <article class="cctvlaptop-service-card">
+            <div class="cctvlaptop-card-header">
+                <div class="cctvlaptop-card-icon">
+                    <svg viewBox="0 0 40 40">
+                        <path d="M4 30 L12 18 L22 24 L32 10 L36 16"/>
+                        <circle cx="12" cy="18" r="2"/>
+                        <circle cx="22" cy="24" r="2"/>
+                        <circle cx="32" cy="10" r="2"/>
+                        <line x1="4" y1="36" x2="36" y2="36"/>
+                        <line x1="4" y1="36" x2="4" y2="8"/>
+                    </svg>
+                </div>
+                <span class="cctvlaptop-card-number">05</span>
+            </div>
+            <h3 class="cctvlaptop-card-title">Advanced
+Analytics and
+Reporting</h3>
+            <p class="cctvlaptop-card-description">
+                Utilization of advanced
+analytics for actionable
+insights into security
+events.
+Detailed reports for trend
+analysis and continuous
+improvement.
+            </p>
+            <!-- <a href="#" class="cctvlaptop-card-link">Learn More</a> -->
+        </article>
+
+        <!-- Card 6 -->
+        <article class="cctvlaptop-service-card">
+            <div class="cctvlaptop-card-header">
+                <div class="cctvlaptop-card-icon">
+                    <svg viewBox="0 0 40 40">
+                        <rect x="4" y="12" width="32" height="20" rx="2"/>
+                        <path d="M4 18 L20 28 L36 18"/>
+                        <line x1="16" y1="6" x2="24" y2="6"/>
+                        <line x1="14" y1="2" x2="26" y2="2"/>
+                    </svg>
+                </div>
+                <span class="cctvlaptop-card-number">06</span>
+            </div>
+            <h3 class="cctvlaptop-card-title">Maintenance and
+Support Services</h3>
+            <p class="cctvlaptop-card-description">
+                Ongoing maintenance to
+ensure optimal
+performance of CCTV
+systems.
+Responsive support team
+for prompt issue resolution
+and system updates.
+            </p>
+            <!-- <a href="#" class="cctvlaptop-card-link">Learn More</a> -->
+        </article>
+    </div>
+
+    <!-- <div class="cctvlaptop-services-cta">
+        <a href="#" class="cctvlaptop-cta-button">
+            <span>View All Services</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </a>
+        <p class="cctvlaptop-cta-text">or <a href="#">contact us</a> for custom solutions</p>
+    </div> -->
+</section>
+
+
+
+<!-- ==================== -->
+    <!-- Our Sales  Approach-->
+    <!-- ==================== -->
+    <div class="container" style="padding:50px 0px;">
+        <div class="section-header">
+            <h2 class="section-title">Our Sales <span>Approach</span></h2>
+            <p class="section-subtitle">Building partnerships through expertise and dedicated support</p>
+        </div>
+
+        <div class="approach-row">
+            <!-- Consultative Sales -->
+            <div class="approach-item">
+                <div class="item-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h3 class="item-title">Consultative Sales</h3>
+                <ul class="item-features">
+                    <li>In-depth understanding of client needs to recommend tailored solutions.</li>
+                    <li>Transparent and competitive pricing to suit various budgets.</li>
+                </ul>
+            </div>
+
+            <!-- Product Demonstrations -->
+            <div class="approach-item">
+                <div class="item-icon">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <h3 class="item-title">Product Demonstrations</h3>
+                <ul class="item-features">
+                    <li>Hands-on demonstrations of computer, laptop, server and CCTV products.</li>
+                    <li>Virtual or in-person demos to facilitate informed decision-making.</li>
+                </ul>
+            </div>
+
+            <!-- Post-Sales Support -->
+            <div class="approach-item">
+                <div class="item-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h3 class="item-title">Post-Sales Support</h3>
+                <ul class="item-features">
+                    <li>Dedicated support for addressing queries and concerns.</li>
+                    <li>Regular follow-ups to ensure client satisfaction.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+     <!-- ==================== -->
+    <!-- why-choose-section -->
+    <!-- ==================== -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why Choose Us</div>
+                <h2 class="section-title">What makes us <span>different</span></h2>
+                <p>At Group Technology Security Solutions, we stand as your reliable partner in achieving
+comprehensive and cutting-edge security for your premises. Experience the seamless
+integration of sales and service expertise to fortify your security infrastructure. Secure your
+future with Group Technology.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">End-to-End
+Security
+Solutions</h3>
+                    <p class="feature-description">Comprehensive range
+of services and
+products for a holistic
+security approach.</p>
+                    <a href="contact.html?service=cctv" class="feature-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p class="feature-description">A commitment to
+understanding and meeting
+individual client security
+requirements.
+Building lasting partnerships
+through open communication
+and collaboration.</p>
+                    <a href="contact.html?service=cctv" class="feature-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Innovation and
+Reliability</h3>
+                    <p class="feature-description">Staying at the forefront
+of technological
+advancements for
+reliable and effective
+security.
+Commitment to
+delivering solutions that
+meet or exceed industry
+standards.</p>
+                    <a href="contact.html?service=cctv" class="feature-link">
+                        Learn More
+                        <svg viewBox="0 0 24 24">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+  <!-- ==================== -->
+    <!-- OUR CLIENTS SECTION  -->
+    <!-- ==================== -->
+    <section class="clients-section">
+        <div class="section-header">
+            <div class="section-label">Our Clients</div>
+            <h2 class="section-title">Trusted by <span>industry leaders</span></h2>
+        </div>
+
+        <div class="logo-scroll-wrapper">
+            <div class="logo-scroll-track">
+                <!-- Client Logos -->
+                <div class="logo-item">
+                    <img src="images/clients/sf.jpeg" alt="Client 1">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/nirvanarealty.png" alt="Client 2">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/dlc.png" alt="Client 3">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/cci.png" alt="Client 4">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/cocomedia.png" alt="Client 5">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/indianoil.png" alt="Client 6">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/skyway.jpeg" alt="Client 7">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/colorpaper.jpeg" alt="Client 8">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="logo-item">
+                    <img src="images/clients/ucx.jpeg" alt="Client 1">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/edelassu.png" alt="Client 2">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/jmfinancial.webp" alt="Client 3">
+                </div>
+               <div class="logo-item">
+                    <img src="images/clients/sf.jpeg" alt="Client 1">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/nirvanarealty.png" alt="Client 2">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/dlc.png" alt="Client 3">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/cci.png" alt="Client 4">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/cocomedia.png" alt="Client 5">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/indianoil.png" alt="Client 6">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/skyway.jpeg" alt="Client 7">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/colorpaper.jpeg" alt="Client 8">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="logo-item">
+                    <img src="images/clients/ucx.jpeg" alt="Client 1">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/edelassu.png" alt="Client 2">
+                </div>
+                <div class="logo-item">
+                    <img src="images/clients/jmfinancial.webp" alt="Client 3">
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- OUR DEALERS SECTION  -->
+    <!-- ==================== -->
+    <section class="dealers-section">
+        <div class="section-header">
+            <div class="section-label">Our Dealers</div>
+            <h2 class="section-title">Partnered with <span>the best</span></h2>
+        </div>
+
+        <div class="logo-scroll-wrapper">
+            <div class="logo-scroll-track">
+                <!-- Dealer Logos -->
+                <div class="logo-item">
+                    <img src="images/dealers/hikvision.png" alt="Dealer 1">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/cpplus.png" alt="Dealer 2">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/ahua.png" alt="Dealer 3">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/dlink.png" alt="Dealer 4">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/tplink.png" alt="Dealer 5">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/secureye.png" alt="Dealer 6">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/honeywell.png" alt="Dealer 7">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/seagate.png" alt="Dealer 8">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="logo-item">
+                    <img src="images/dealers/hikvision.png" alt="Dealer 1">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/cpplus.png" alt="Dealer 2">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/ahua.png" alt="Dealer 3">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/dlink.png" alt="Dealer 4">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/tplink.png" alt="Dealer 5">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/secureye.png" alt="Dealer 6">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/honeywell.png" alt="Dealer 7">
+                </div>
+                <div class="logo-item">
+                    <img src="images/dealers/seagate.png" alt="Dealer 8">
+                </div>
+            </div>
+        </div>
+    </section>
+  
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+  <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <div class="footer-separator"></div>
+        <a href="about.html">About</a>
+        <div class="footer-separator"></div>
+        <a href="cctvservice.html">CCTV Camera</a>
+        <div class="footer-separator"></div>
+        <a href="computersalesandservices.html">Computer Sales & Services</a>
+        <div class="footer-separator"></div>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copyright">© <span id="year"></span> <span>Group Technology Solutions</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
+
+    toggle?.addEventListener('click', () => {
+      toggle?.classList.toggle('active');
+      navLinks?.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link?.addEventListener('click', () => {
+        toggle?.classList.remove('active');
+        navLinks?.classList.remove('active');
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Image Slider
+    const slides = document.querySelector('.slides');
+    const slideElements = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.slider-nav.prev');
+    const nextBtn = document.querySelector('.slider-nav.next');
+    
+    let currentSlide = 0;
+    const totalSlides = slideElements.length;
+    let autoSlideInterval;
+    const slideDuration = 5000;
+
+    function goToSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      debugger;
+      currentSlide = index;
+      if(slides){
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+
+      // Restart animations
+      slideElements.forEach((slide, i) => {
+        const content = slide.querySelector('.slide-content');
+        if (i === currentSlide) {
+          content.querySelectorAll('h1, p, .btn').forEach(el => {
+            el.style.animation = 'none';
+            el.offsetHeight;
+            el.style.animation = '';
+          });
+        }
+      });
+
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    // Event listeners
+    nextBtn?.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    prevBtn?.addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    dots?.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetAutoSlide();
+      });
+    });
+
+    // Auto slide
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, slideDuration);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+        resetAutoSlide();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+        resetAutoSlide();
+      }
+    });
+
+    // Touch/Swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const slider = document.querySelector('.slider');
+
+    slider?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    slider?.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+        resetAutoSlide();
+      }
+    }
+
+    // Pause on hover (desktop)
+    slider?.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+    });
+
+    slider?.addEventListener('mouseleave', () => {
+      resetAutoSlide();
+    });
+
+    // Start auto sliding
+    startAutoSlide();
+  </script>
+</body>
+</html>
