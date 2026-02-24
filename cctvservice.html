@@ -512,14 +512,13 @@
 
         .logo-item {
             flex-shrink: 0;
-            width: 200px;
-            height: 100px;
+            width: 120px;
+           
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px 40px;
+            padding:0px;
             margin: 0 20px;
-            background: var(--white-off);
             border-radius: 12px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
@@ -531,14 +530,14 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            /* background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%); */
             opacity: 0;
             transition: opacity 0.4s ease;
         }
 
         .logo-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -10px rgba(255, 107, 0, 0.2);
+             transform: translateY(-2px);
+    box-shadow: none;
         }
 
         .logo-item:hover::before {
@@ -546,20 +545,20 @@
         }
 
         .logo-item img {
-            max-width: 100%;
-            max-height: 50px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            filter: grayscale(100%) opacity(0.6);
-            transition: filter 0.4s ease, transform 0.4s ease;
-            position: relative;
-            z-index: 1;
+           max-width: 85%;
+    /* max-height: 50px; */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* filter: grayscale(100%) opacity(0.6); */
+    transition: filter 0.4s ease, transform 0.4s ease;
+    position: relative;
+    z-index: 1;
         }
 
         .logo-item:hover img {
             filter: grayscale(0%) opacity(1);
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         /* ==================== */
@@ -568,19 +567,20 @@
         .dealers-section {
             width: 100%;
             padding: 80px 0;
-            background:whitesmoke;
+            
             overflow: hidden;
             position: relative;
+            border-top:1px solid #d7d7d7
         }
 
         .dealers-section .section-label {
             color: var(--orange);
         }
 
-        .dealers-section .section-label::before,
+        /* .dealers-section .section-label::before,
         .dealers-section .section-label::after {
             background: var(--orange);
-        }
+        } */
 
         .dealers-section .section-title {
             color: #000;
@@ -590,13 +590,13 @@
             color: var(--orange);
         }
 
-        .dealers-section .logo-scroll-wrapper::before {
+        /* .dealers-section .logo-scroll-wrapper::before {
             background: linear-gradient(90deg, var(--black) 0%, transparent 100%);
         }
 
         .dealers-section .logo-scroll-wrapper::after {
             background: linear-gradient(-90deg, var(--black) 0%, transparent 100%);
-        }
+        } */
 
         .dealers-section .logo-scroll-track {
             animation: scroll-reverse 35s linear infinite;
@@ -612,21 +612,17 @@
         }
 
         .dealers-section .logo-item {
-            background: var(--black-soft);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            /* background: var(--black-soft);
+            border: 1px solid rgba(255, 255, 255, 0.08); */
         }
 
         .dealers-section .logo-item::before {
-            background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 100%);
+            /* background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 100%); */
         }
 
-        .dealers-section .logo-item:hover {
-            box-shadow: 0 20px 40px -10px rgba(255, 107, 0, 0.3);
-            border-color: rgba(255, 107, 0, 0.2);
-        }
-
+        
         .dealers-section .logo-item img {
-            filter: grayscale(100%) brightness(1.5) opacity(0.6);
+            
         }
 
         .dealers-section .logo-item:hover img {
@@ -1152,7 +1148,7 @@
 
 
  <!-- About Section -->
- <section id="cctvlaptop-about">
+ <section id="cctvlaptop-about" style="display: none;">
     <div class="cctvlaptop-about-container">
         <div class="cctvlaptop-about-image-wrapper">
             <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80" alt="Server Room" class="cctvlaptop-about-image" />
@@ -1176,7 +1172,7 @@ businesses seeking robust security for their premises.
 </section>
 
 <!-- Mission Section -->
-<section id="cctvlaptop-mission">
+<section id="cctvlaptop-mission" style="display: none;">
     <div class="cctvlaptop-mission-container">
         <div class="cctvlaptop-mission-content">
             <div class="cctvlaptop-mission-label">What We Do</div>
@@ -1764,7 +1760,7 @@ standards.</p>
     function goToSlide(index) {
       if (index < 0) index = totalSlides - 1;
       if (index >= totalSlides) index = 0;
-      debugger;
+      
       currentSlide = index;
       if(slides){
       slides.style.transform = `translateX(-${currentSlide * 100}%)`;
