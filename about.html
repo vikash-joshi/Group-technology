@@ -12,12 +12,67 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+<script>
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document.getElementById("loader").style.opacity = "0";
+      document.getElementById("loader").style.transition = "1.6s";
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+      }, 500);
+    }, 2800); // 2 seconds
+  });
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Group Technology",
+  "url": "https://www.grouptechnology.in",
+  "logo": "https://www.grouptechnology.in/assets/logo.png",
+  "email": "vipin@grouptechnology.in",
+  "telephone": "+91-9821114684",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop No 04, Shraddha C.H.S, Road No 2, Shashtri Nagar",
+    "addressLocality": "Goregaon West",
+    "addressRegion": "MH",
+    "postalCode": "400104",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Sa 10:00-19:00",
+  "sameAs": []
+}
+</script>
+
 </head>
 <body>
-   <!-- Navbar -->
-   <nav class="navbar">
+ <div id="loader">
+  <div class="loading-text">
+    Loading<span class="dot">.</span><span class="dot">.</span
+    ><span class="dot">.</span>
+  </div>
+  <div class="loading-bar-background">
+    <div class="loading-bar">
+      <div class="white-bars-container">
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Navbar -->
+  <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo"><img src="images/logo.png" style="max-width:55px;"></a>
+      <a href="index.html" class="logo"><img src="images/logo.png" style="max-width:55px;"></a>
       <button class="menu-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -25,90 +80,136 @@
       </button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="cctvservice.html">CCTV Camera</a></li>
-        <li><a href="computersalesandservices.html">Computer Sales & Services</a></li> 
+        <li><a href="about.html"  class="active">About</a></li>
+        <li><a href="ourservices.html">Our Services</a></li>
+        <li><a href="ourexpertise.html">Our Expertise</a></li> 
+        <li style="display:none"><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="gts-container">
-    
-    <!-- Page Header -->
-    <header class="gts-page-header">
-      <!-- Accent Bar -->
-      <div class="gts-accent-bar"></div>
-      
-      <!-- Decorative Circles -->
-      <div class="gts-header-circle"></div>
-      <div class="gts-header-circle-inner"></div>
+   
 
-      <!-- Content -->
-      <div class="gts-header-content">
-        <nav class="gts-breadcrumb">
-          <a href="index.html">Home</a>
-          <span class="gts-breadcrumb-separator">›</span>
-          <span class="gts-breadcrumb-current">About Us</span>
-        </nav>
-        <div class="gts-title-row">
-          <h1 class="gts-page-title">About <span>Us</span></h1>
-          <p class="gts-tagline">Company
-            Overview</p>
-        </div>
-      </div>
-    </header>
 
-    <!-- Content Area -->
-     
+<!-- BANNER -->
+<div class="new_abot_design-banner">
+  <div class="new_abot_design-banner-glow-l"></div>
+  <div class="new_abot_design-banner-glow-r"></div>
+  <div class="new_abot_design-banner-tag">Who We Are</div>
+  <h1 class="new_abot_design-banner-title">About <span>Us</span></h1>
+  <div class="new_abot_design-banner-line"></div>
+  <div class="new_abot_design-breadcrumb">Home &nbsp;/&nbsp; <span>About Us</span></div>
+</div>
 
+<!-- CONTENT -->
+<div class="new_abot_design-content">
+
+  <!-- Exact text as provided -->
+  <!-- <p class="new_abot_design-intro">
+    Group Technology is a leading company specializing in the installation, system integration, and maintenance of modern security and communication systems. With over a decade of industry experience, the company has steadily evolved alongside technological advancements to meet the changing needs of its clients.
+  </p> -->
+
+  <p class="new_abot_design-para">
+    Group Technology is a leading company specializing in the installation, system integration, and maintenance of modern security and communication systems. With over a decade of industry experience, the company has steadily evolved alongside technological advancements to meet the changing needs of its clients.
+  </p>
+
+  <p class="new_abot_design-para">
+    We proudly serve a diverse clientele that includes star hotels and resorts, corporate offices, housing societies, real estate developers, temple complexes, NGOs, educational institutions, and banks. Our operations span across Mumbai, Navi Mumbai, Goa, Pune, Gujarat, and Delhi.
+  </p>
+
+  <p class="new_abot_design-para">
+    With over a decade of experience in the industry, Group Technology has continuously evolved alongside technological advancements to meet the changing needs of customers. Today, the company is recognized as a trusted and sought-after name for its expertise in the installation and maintenance of Computer, Servers, CCTV surveillance systems, biometric devices, and Wi-Fi networking solutions.
+  </p>
+
+  <p class="new_abot_design-para">
+    We have partnered with some of the world’s leading technology brands, ensuring our team receives top-tier training and access to the latest innovations. This commitment to quality, expertise, and innovation allows us to deliver reliable, cutting-edge solutions that exceed customer expectations
+  </p>
+
+  <!-- Stats -->
+  <div class="new_abot_design-stats">
+    <div class="new_abot_design-stat">
+      <div class="new_abot_design-stat-num">10<sup>+</sup></div>
+      <div class="new_abot_design-stat-lbl">Years Experience</div>
+    </div>
+    <div class="new_abot_design-stat">
+      <div class="new_abot_design-stat-num">6</div>
+      <div class="new_abot_design-stat-lbl">Cities Served</div>
+    </div>
+    <div class="new_abot_design-stat">
+      <div class="new_abot_design-stat-num">500<sup>+</sup></div>
+      <div class="new_abot_design-stat-lbl">Projects Delivered</div>
+    </div>
+    <div class="new_abot_design-stat">
+      <div class="new_abot_design-stat-num">100<sup>%</sup></div>
+      <div class="new_abot_design-stat-lbl">Client Satisfaction</div>
+    </div>
   </div>
-  
-  
-  <!-- COMPANY OVERVIEW SECTION -->
-  <section class="company-overview" style="background-color: #fff;">
-    <div class="overview-wrapper">
-      <div class="overview-left">
-        <span class="overview-tag">About Us</span>
-        <h1 class="overview-title">Company<br><span class="highlight">Overview</span></h1>
-        <p class="overview-description">
-          Group Technology Solutions is a distinguished provider of innovative sales and services in the realm of computers and servers. With a commitment to technological excellence, personalized service, and customer satisfaction, we deliver a comprehensive suite of solutions to meet the diverse needs of businesses in the digital age.
-        </p>
-      </div>
-      <!-- <div class="overview-right">
-        <div class="overview-graphic">
-          <div class="circle-ring"></div>
-          <div class="circle-ring"></div>
-          <div class="circle-ring"></div>
-          <div class="center-dot"></div>
-        </div>
-      </div> -->
-    </div>
-  </section>
 
-  <!-- MISSION SECTION -->
-  <section class="mission-section">
-    <div class="mission-wrapper">
-      <div class="mission-header">
-        <span class="mission-tag">What We Believe</span>
-        <h2 class="mission-title">Mission</h2>
-      </div>
-      <div class="mission-content">
-        <div class="mission-item">
-          <span class="mission-number">01</span>
-          <p class="mission-text">
-            <span class="orange-dot"></span>Our mission is to empower businesses with cutting-edge computer and server solutions through expert sales consultation and reliable service support. We strive to be the trusted partner that helps organizations navigate the ever-evolving landscape of technology with confidence.
-          </p>
-        </div>
-        <div class="mission-item">
-          <span class="mission-number">02</span>
-          <p class="mission-text">
-            <span class="orange-dot"></span>At Group Technology Solutions, we are dedicated to providing not just products but complete solutions. Whether you are upgrading your computers or enhancing server capabilities, trust us to guide you towards a more efficient and technologically advanced future. Experience the Group Technology advantage today.
-          </p>
-        </div>
+  <!-- Services -->
+  <div class="new_abot_design-section-label">What We Do</div>
+  <div class="new_abot_design-services">
+    <div class="new_abot_design-service-card">
+      <div class="new_abot_design-service-icon">📷</div>
+      <div>
+        <div class="new_abot_design-service-name">CCTV Surveillance</div>
+        <div class="new_abot_design-service-desc">End-to-end surveillance systems for complete security coverage.</div>
       </div>
     </div>
-  </section>
+    <div class="new_abot_design-service-card">
+      <div class="new_abot_design-service-icon">🖥️</div>
+      <div>
+        <div class="new_abot_design-service-name">Servers & Computers</div>
+        <div class="new_abot_design-service-desc">Setup, integration and maintenance of IT infrastructure.</div>
+      </div>
+    </div>
+    <div class="new_abot_design-service-card">
+      <div class="new_abot_design-service-icon">🔑</div>
+      <div>
+        <div class="new_abot_design-service-name">Biometric Devices</div>
+        <div class="new_abot_design-service-desc">Access control and attendance solutions using biometric technology.</div>
+      </div>
+    </div>
+    <div class="new_abot_design-service-card">
+      <div class="new_abot_design-service-icon">📶</div>
+      <div>
+        <div class="new_abot_design-service-name">Wi-Fi Networking</div>
+        <div class="new_abot_design-service-desc">Reliable, high-speed wireless networks for any scale of operation.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Regions -->
+  <div class="new_abot_design-regions-wrap">
+    <div class="new_abot_design-regions-label">We Operate In</div>
+    <div class="new_abot_design-regions-dots">
+      <div class="new_abot_design-region-pill">Mumbai</div>
+      <div class="new_abot_design-region-pill">Navi Mumbai</div>
+      <div class="new_abot_design-region-pill">Goa</div>
+      <div class="new_abot_design-region-pill">Pune</div>
+      <div class="new_abot_design-region-pill">Gujarat</div>
+      <div class="new_abot_design-region-pill">Delhi</div>
+    </div>
+  </div>
+
+  <!-- Clients -->
+  <div class="new_abot_design-section-label">Clients We Serve</div>
+  <div class="new_abot_design-clients-wrap">
+    <div class="new_abot_design-client-pill">⭐ Star Hotels & Resorts</div>
+    <div class="new_abot_design-client-pill">🏢 Corporate Offices</div>
+    <div class="new_abot_design-client-pill">🏘️ Housing Societies</div>
+    <div class="new_abot_design-client-pill">🏗️ Real Estate Developers</div>
+    <div class="new_abot_design-client-pill">🛕 Temple Complexes</div>
+    <div class="new_abot_design-client-pill">🤝 NGOs</div>
+    <div class="new_abot_design-client-pill">🎓 Educational Institutions</div>
+    <div class="new_abot_design-client-pill">🏦 Banks</div>
+  </div>
+
+</div>
+
+  
+
+  
 
   <div class="container">
     <!-- Header -->
@@ -176,21 +277,23 @@
    
 <!-- FOOTER -->
 <footer class="footer">
-    <div class="footer-content">
-      <nav class="footer-links">
-        <a href="index.html">Home</a>
-        <div class="footer-separator"></div>
-        <a href="about.html">About</a>
-        <div class="footer-separator"></div>
-        <a href="cctvservice.html">CCTV Camera</a>
-        <div class="footer-separator"></div>
-        <a href="computersalesandservices.html">Computer Sales & Services</a>
-        <div class="footer-separator"></div>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <p class="footer-copyright">© <span id="year"></span> <span>Group Technology Solutions</span>. All Rights Reserved.</p>
-    </div>
-  </footer>
+  <div class="footer-content">
+<nav class="footer-links">
+      <a href="index.html">Home</a>
+      <div class="footer-separator"></div>
+      <a href="about.html">About</a>
+      <div class="footer-separator"></div>
+      <a href="ourservices.html">Our Services</a>
+      <div class="footer-separator"></div>
+      <a href="ourexpertise.html">Our Expertise</a>
+      <!-- <div class="footer-separator"></div>
+      <a href="gallery.html">Gallery</a> -->
+      <div class="footer-separator"></div>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copyright">© <span id="year">2025</span> <span>Group Technology Solutions</span>. All Rights Reserved.</p>
+  </div>
+</footer>
 <script>
   document.getElementById("year").innerText = new Date().getFullYear();
 </script>

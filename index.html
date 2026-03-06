@@ -21,38 +21,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-  #loader {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: white; /* change to #800000 if you want maroon */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-
-  #loader img {
-    width: 150px;
-    animation: pulse 1.5s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.7; }
-  }
-</style>
+   
 <script>
   window.addEventListener("load", function () {
     setTimeout(function () {
       document.getElementById("loader").style.opacity = "0";
-      document.getElementById("loader").style.transition = "0.5s";
+      document.getElementById("loader").style.transition = "1.6s";
       setTimeout(() => {
         document.getElementById("loader").style.display = "none";
-      }, 500);
-    }, 1500); // 2 seconds
+      }, 0);//500
+    }, 0); // 2800 2 seconds
   });
 </script>
   <script type="application/ld+json">
@@ -80,7 +58,26 @@
 </head>
 <body>
  <div id="loader">
-  <img src="images/logo.png" alt="Group Technology Logo">
+  <div class="loading-text">
+    Loading<span class="dot">.</span><span class="dot">.</span
+    ><span class="dot">.</span>
+  </div>
+  <div class="loading-bar-background">
+    <div class="loading-bar">
+      <div class="white-bars-container">
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+        <div class="white-bar"></div>
+      </div>
+    </div>
+  </div>
 </div>
   <!-- Navbar -->
   <nav class="navbar">
@@ -94,8 +91,9 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="cctvservice.html">CCTV Camera</a></li>
-        <li><a href="computersalesandservices.html">Computer Sales & Services</a></li> 
+        <li><a href="ourservices.html">Our Services</a></li>
+        <li><a href="ourexpertise.html">Our Expertise</a></li> 
+        <li style="display:none"><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -223,14 +221,14 @@
     <div class="services-container">
       <div class="services-grid">
         <!-- CCTV Camera Service -->
-        <a href="cctvservice.html" class="service-card">
-          <div class="service-icon">
+        <a href="ourservices.html" class="service-card">
+          <!-- <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
               <circle cx="12" cy="13" r="3"/>
             </svg>
-          </div>
-          <h3>CCTV CAMERA</h3>
+          </div> -->
+          <h3>Our Services</h3>
           <div class="service-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -239,15 +237,15 @@
         </a>
 
         <!-- Computer Sales & Services -->
-        <a href="computersalesandservices.html" class="service-card">
-          <div class="service-icon">
+        <a href="ourexpertise.html" class="service-card">
+          <!-- <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
               <line x1="8" y1="21" x2="16" y2="21"/>
               <line x1="12" y1="17" x2="12" y2="21"/>
             </svg>
-          </div>
-          <h3>COMPUTER SALES & SERVICES</h3>
+          </div> -->
+          <h3>Our Expertise</h3>
           <div class="service-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -263,8 +261,14 @@
       <div class="overview-left">
         <span class="overview-tag">About Us</span>
         <h1 class="overview-title">Company<br><span class="highlight">Overview</span></h1>
-        <p class="overview-description">
-          Group Technology Solutions is a distinguished provider of innovative sales and services in the realm of computers and servers. With a commitment to technological excellence, personalized service, and customer satisfaction, we deliver a comprehensive suite of solutions to meet the diverse needs of businesses in the digital age.
+      <p class="overview-description">
+        <span style="font-weight: 800;">End-to-End Solutions for Commercial and Residential Spaces</span><br />
+        <span style="font-weight: 800;">Delivering Excellence Through Smart Solutions</span><br />
+        <b>Group Technology Solutions</b> is a rapidly growing, multi-service solutions provider based in Mumbai, delivering comprehensive technology and infrastructure services to both commercial and residential clients.<br>
+        We specialize in the design, supply, integration, and maintenance of: Computer Systems &amp; Workstations, Enterprise Servers &amp; Storage Solutions, CCTV &amp; Advanced Security Systems , Access Control &amp; Biometric Time Attendance Systems, Networking &amp; IT Infrastructure Solutions, Integrated Communication &amp; Technology Solutions<br>
+        Our approach combines deep technical expertise with industry best practices to deliver secure, scalable, and cost-effective solutions aligned with evolving business requirements. We help organizations build robust network and security infrastructures that ensure compliance, enhance operational efficiency, strengthen business continuity, and minimize operational risks.<br>
+        With proven capabilities in delivering end-to-end, customized, and fully integrated communication solutions, we empower our clients to achieve measurable business advantages and sustainable growth.<br>
+        Backed by a strong understanding of the industries we serve, <b>Group Technology Solutions</b> is committed to quality execution, professional service delivery, and long-term client partnerships.
         </p>
       </div>
       <!-- <div class="overview-right">
@@ -278,11 +282,42 @@
     </div>
   </section>
 
+
+
+  <section class="company-overview">
+    <div class="overview-wrapper">
+      <div class="overview-left">
+        
+        <h1 class="overview-title">What<span class="highlight"> We Do</span></h1>
+      <p class="overview-description">
+        At <b>Group Technology Solutions</b>, we are committed to delivering the highest standards of security and technology solutions for both residential and commercial clients.
+<br />Our services cover the complete lifecycle of every project — from initial consultation and system design to installation, testing, commissioning, and ongoing support.
+<br />We focus on building long-term relationships by understanding each client’s unique requirements and providing tailored solutions that combine reliability, efficiency, and advanced technology. Our dedication to rapid response, professional service, and meticulous attention to detail has established <b>Group Technology Solutions</b> as a trusted name in the industry
+      </p>
+      </div>
+     
+    </div>
+  </section>
+  
+ <section class="company-overview">
+    <div class="overview-wrapper">
+      <div class="overview-left">
+        
+        <h1 class="overview-title">Our<span class="highlight"> Identity</span></h1>
+      <p class="overview-description">
+        <b>Group Technology Solutions</b> is a leading contractor and service provider specializing in Security, Automation, and Information Technology solutions. With a dedicated network of customer support engineers across Mumbai, we ensure prompt, reliable, and efficient service for all our clients.<br />
+Established in early 2011 and headquartered in Mumbai, we have been serving the evolving needs of businesses and residential communities with advanced security, IT, and automation solutions. Our mission is to deliver innovative, dependable, and cost-effective systems that enhance safety, improve efficiency, and support operational excellence.
+      </p>
+      </div>
+     
+    </div>
+  </section>
+
   <!-- MISSION SECTION -->
-  <section class="mission-section">
+  <section class="mission-section" style="display: none;">
     <div class="mission-wrapper">
       <div class="mission-header">
-        <span class="mission-tag">What We Believe</span>
+        <span class="mission-tag">What We Do</span>
         <h2 class="mission-title">Mission</h2>
       </div>
       <div class="mission-content">
@@ -302,7 +337,7 @@
     </div>
   </section>
 
-  <div class="container">
+  <div class="container" style="display: none;">
     <!-- Header -->
     <div class="header">
       <div class="header-content">
@@ -492,10 +527,12 @@
         <div class="footer-separator"></div>
         <a href="about.html">About</a>
         <div class="footer-separator"></div>
-        <a href="cctvservice.html">CCTV Camera</a>
+        <a href="ourservices.html">Our Services</a>
         <div class="footer-separator"></div>
-        <a href="computersalesandservices.html">Computer Sales & Services</a>
+        <a href="ourexpertise.html">Our Expertise</a>
         <div class="footer-separator"></div>
+        <!-- <a href="gallery.html">Gallery</a>
+        <div class="footer-separator"></div> -->
         <a href="contact.html">Contact</a>
       </nav>
       <p class="footer-copyright">© <span id="year">2025</span> <span>Group Technology Solutions</span>. All Rights Reserved.</p>
