@@ -305,7 +305,7 @@ left:0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.85) 0%, rgba(26, 26, 26, 0.6) 100%);
+    background: linear-gradient(135deg, rgb(10 10 10 / 13%) 0%, rgb(26 26 26 / 35%) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3642,9 +3642,9 @@ left:0;
   padding: 15px 0;
   border-bottom: 1px solid var(--nws-border);
   text-decoration: none;
-  color: var(--nws-muted);
-  font-size: 0.9rem;
-  font-weight: 500;
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 800;
   transition: color 0.25s, padding-left 0.25s;
 }
 
@@ -3658,6 +3658,7 @@ left:0;
   font-weight: 700;
   color: var(--nws-orange);
   letter-spacing: 1px;
+  display: none !important;
 }
 
 .nws_serv_lat_anchor_arr {
@@ -3708,6 +3709,7 @@ left:0;
   pointer-events: none;
   user-select: none;
   letter-spacing: -6px;
+  display: none !important;
 }
 
 /* Label row */
