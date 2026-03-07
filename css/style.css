@@ -3065,7 +3065,7 @@ left:0;
 
   /* ── SERVICES ── */
   .new_abot_design-section-label {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -3107,7 +3107,7 @@ left:0;
   }
 
   .new_abot_design-service-name {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--black);
     margin-bottom: 4px;
@@ -3132,7 +3132,7 @@ left:0;
   }
 
   .new_abot_design-regions-label {
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -3168,7 +3168,7 @@ left:0;
     border: 1px solid var(--border-light);
     border-radius: 100px;
     padding: 8px 18px;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--black-soft);
     transition: background 0.2s, border-color 0.2s, color 0.2s;
     cursor: default;
@@ -3455,7 +3455,7 @@ left:0;
   flex-shrink:0;
 }
 .tnd-new-des-card-title{
-  font-family:var(--tnd-fh); font-size:14px; font-weight:700;
+  font-family:var(--tnd-fh); font-size:15px; font-weight:700;
   color:var(--tnd-black); line-height:1.3;
 }
 .tnd-new-des-card-desc{
@@ -3480,7 +3480,7 @@ left:0;
   box-shadow:0 6px 24px rgba(255,85,0,.08);
 }
 .tnd-new-des-list-num{
-  font-family:var(--tnd-fh); font-size:11px; font-weight:800;
+  font-family:var(--tnd-fh); font-size:13px; font-weight:800;
   color:var(--tnd-orange); min-width:28px; padding-top:2px;
   opacity:.7;
 }
@@ -3519,7 +3519,7 @@ left:0;
   margin:28px 0 16px;
 }
 .tnd-new-des-section-label span{
-  font-family:var(--tnd-fh); font-size:10px; font-weight:800;
+  font-family:var(--tnd-fh); font-size:16px; font-weight:800;
   letter-spacing:.16em; text-transform:uppercase; color:var(--tnd-orange);
   white-space:nowrap;
 }
@@ -3836,7 +3836,7 @@ left:0;
    BLOCK LABEL
 ══════════════════════════════════ */
 .nws_serv_lat_blk_label {
-  font-size: 0.68rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -4051,7 +4051,7 @@ left:0;
 }
 
 .nws_serv_lat_sol_tile_num {
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--nws-orange);
@@ -4059,7 +4059,7 @@ left:0;
 }
 
 .nws_serv_lat_sol_tile h4 {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--nws-text);
